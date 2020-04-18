@@ -137,14 +137,14 @@ if [[ -z "$TMUX" ]] ;then
 fi
 
 # ~ Gazebo Environment ~
-export LD_LIBRARY_PATH=/opt/ros/groovy/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
-export LD_PATH_LIB=/opt/ros/melodic/lib
-export PATH=/usr/local/bin:$PATH
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
-source /usr/local/share/gazebo/setup.sh
+# export LD_LIBRARY_PATH=/opt/ros/groovy/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+# export LD_PATH_LIB=/opt/ros/melodic/lib
+# export PATH=/usr/local/bin:$PATH
+# export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+# source /usr/local/share/gazebo/setup.sh
 
 # source /home/cade/School/cs6350_s19_finalproj/code/ws/devel/setup.bash
 # source /home/cade/School/cs6350_s19_finalproj/code/ws/devel/setup.bash
 #
-source /opt/ros/melodic/setup.zsh
+#source /opt/ros/melodic/setup.zsh
