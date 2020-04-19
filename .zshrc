@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cade/.oh-my-zsh"
+export ZSH="/home/cpark/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -120,7 +120,7 @@ alias rz="source ~/.zshrc && rehash"
 #         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 
-export PATH="/home/cade/anaconda3/bin:$PATH"
+export PATH="/home/cpark/anaconda3/bin:$PATH"
 
 # Setup tmux
 ZSH_TMUX_AUTOSTART=false
