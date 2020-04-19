@@ -1,9 +1,7 @@
 " let g:base16_shell_path='base16-builder/output/shell/'
 
 set background=dark
-" let base16colorspace=256
 set termguicolors
-
 
 set relativenumber
 set number
@@ -53,9 +51,38 @@ Plug 'klen/python-mode'
 " Plug 'Valloric/vim-operator-highlight'
 " Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
-Plug '/severin-lemaignan/vim-minimap'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'taketwo/vim-ros'
+Plug 'neomake/neomake'
 call plug#end()
+
+""""""""""""
+" Neomake
+""""""""""""
+" when to activate neomake
+call neomake#configure#automake('rw', 50)
+
+let g:neomake_python_pylint_maker = {
+  \ 'args': [
+  \ '-d', 'C0103, C0111',
+  \ '-f', 'text',
+  \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
+  \ '-r', 'n'
+  \ ],
+  \ 'errorformat':
+  \ '%A%f:%l:%c:%t: %m,' .
+  \ '%A%f:%l: %m,' .
+  \ '%A%f:(%l): %m,' .
+  \ '%-Z%p^%.%#,' .
+  \ '%-G%.%#',
+  \ }
+
+" which linter to enable for Python source file linting
+let g:neomake_python_enabled_makers = ['flake8', 'pylint']
+
+""""""""""""
 
 colorscheme nord
 
-" autocmd! bufwritepost $MYVIMRC source $MYVIMRC
+" Auto-source init.vim
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC

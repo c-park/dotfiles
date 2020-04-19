@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cpark/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -10,6 +10,9 @@ export ZSH="/home/cpark/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="avit"
 ZSH_THEME="spaceship"
+
+# Spaceship Prompt Settings
+SPACESHIP_BATTERY_SHOW=false
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,11 +104,11 @@ export MYVIMRC="~/.config/nvim/init.vim"
 #
 # Example aliases
 alias vim="vi"
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim ~/.dotfiles/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # source /.zshrc
-alias rz="source ~/.zshrc && rehash"
+alias rz="source ~/.dotfiles/.zshrc && rehash"
 
 # alias sshbravo="ssh root@172.16.14.211"
 # alias sshfred="ssh root@172.16.14.212"
@@ -113,14 +116,11 @@ alias rz="source ~/.zshrc && rehash"
 #
 #
 
-# BASE16
-# BASE16_SHELL="$HOME/.config/base16-shell/"
-# [ -n "$PS1" ] && \
-#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 
-export PATH="/home/cpark/anaconda3/bin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # Setup tmux
 ZSH_TMUX_AUTOSTART=false
@@ -147,4 +147,4 @@ fi
 # source /home/cade/School/cs6350_s19_finalproj/code/ws/devel/setup.bash
 # source /home/cade/School/cs6350_s19_finalproj/code/ws/devel/setup.bash
 #
-#source /opt/ros/melodic/setup.zsh
+source /opt/ros/melodic/setup.zsh
