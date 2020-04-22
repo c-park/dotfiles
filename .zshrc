@@ -116,6 +116,8 @@ alias rz="source ~/.dotfiles/.zshrc && rehash"
 #
 #
 
+# change o-w directory color for ntfs storage drive
+eval $(dircolors -b ~/.dir_colors)
 
 
 export PATH="$HOME/anaconda3/bin:$PATH"
