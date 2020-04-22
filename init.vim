@@ -14,14 +14,12 @@ set ts=4 sw=4 sts=4 sta
 
 set mouse=a
 
+let mapleader=","
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
-" Plug 'tmhedberg/SimpylFold'
+"Plug 'tmhedberg/SimpylFold'
 Plug 'jalvesaq/vimcmdline'
-"Plug 'daeyun/vim-matlab'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'PotatoesMaster/i3-vim-syntax'
 "Plug 'scrooloose/syntastic'
 Plug 'chriskempson/base16-vim'
 " Plug 'hdima/python-syntax'
@@ -29,12 +27,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'fs111/pydoc.vim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
-Plug 'ervandew/supertab'
-"Plug 'jpo/vim-railscasts-theme'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-"Plug 'JuliaLang/julia-vim'
-"Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 "Plug 'justinmk/vim-syntax-extra'
 Plug 'tmhedberg/matchit'
 Plug 'jpalardy/vim-slime'
@@ -44,17 +38,27 @@ Plug 'scrooloose/nerdtree'
 " Plug 'edkolev/tmuxline.vim'
 Plug 'majutsushi/tagbar'
 Plug 'christoomey/vim-system-copy'
-"Plug 'Chiel92/vim-autoformat'
-"Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'zchee/deoplete-clang'
 Plug 'mhinz/vim-startify'
-Plug 'klen/python-mode'
-" Plug 'Valloric/vim-operator-highlight'
-" Plug 'morhetz/gruvbox'
+" Plug 'klen/python-mode'
 Plug 'tpope/vim-commentary'
 Plug 'severin-lemaignan/vim-minimap'
 Plug 'taketwo/vim-ros'
 Plug 'neomake/neomake'
 call plug#end()
+
+""""""""""""""
+" Deoplete
+""""""""""""""
+
+let g:deoplete#enable_at_startup = 1
+
+let g:deoplete#sources#clang#libclang_path='/usr/lib/llvm-6.0/lib/libclang.so.1'
+let g:deoplete#sources#clang#clang_header='/usr/lib/llvm-6.0/lib/clang'
+
+""""""""""""""
 
 """"""""""""
 " Neomake
@@ -81,6 +85,8 @@ let g:neomake_python_pylint_maker = {
 let g:neomake_python_enabled_makers = ['flake8', 'pylint']
 
 """"""""""""
+
+set foldmethod=manual
 
 colorscheme nord
 
